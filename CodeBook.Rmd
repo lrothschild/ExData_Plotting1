@@ -1,0 +1,27 @@
+---
+title: "Codebook"  
+output: html_document
+---
+The 4 plots in this file were generated from data given in the file 
+*household_power_consumption.txt*.  The data read and used was generated from a number of sensor readings taken each minute from 1/2/2007 00:00:00 to 2/2/2014 23:59:00.  Each R file first produces a Data Table named *power*.  The columns of *power* are:  
+  
+* Date: date in format yyyy-mm-dd  
+* Time: time in format hh:mm:ss  
+* Global_active_power: household global minute-averaged active power (in kilowatt)  
+* Global_reactive_power: household global minute-averaged reactive power (in kilowatt)  
+* Voltage: minute-averaged voltage (in volt)  
+* Global_intensity: household global minute-averaged current intensity (in ampere)  
+* Sub_metering_1: energy sub-metering No. 1 (in watt-hour of active energy). It corresponds to the kitchen, containing mainly a dishwasher, an oven and a microwave (hot plates are not electric but gas powered).  
+* Sub_metering_2: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light.    
+* Sub_metering_3: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.
+* Day:  Day of week as number 1-7  
+* Hour:  Hour of day  
+* Minute: Minute of hour  
+
+The plots were all created using the basic R plotting system, together with dplyr and lubridate. The 4 files plot1.png, plot2.png, plot3.png, and plot4.png contain .png images of the plots, while the corresponding .R files contain the code for producing the .png files.  The plots are as follows:
+
+* Plot 1 is a histogram of the frequences of global active power with values from 0 to 6 in 24 equally spaced intervals.
+* Plot 2 is a line graph of global active power as a function of time (minutes).
+* Plot 3 contains three line graphs (in different colors) of Sub meterings 1 to 3 as functions of time.
+* Plot 4 contains 4 separate plots. Locations (1,1) contains Plot 2 and location(2,1) contains Plot 3.  Location (1,2) contains a line graph of voltage as a function of time (minutes).  Plot 4 is a series of boxplots of Global reactive power taken over 15 minute intervals.
+
